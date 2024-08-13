@@ -1,0 +1,54 @@
+.main-container {
+    background-color: #fff; /* Light background color for the page */
+    display: flex; /* Center content horizontally */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .contact-section {
+    font-family: 'Poppins', sans-serif; /* Font family for the section */
+    position: relative; /* Ensure proper positioning for other elements if needed */
+    margin: 0 auto; /* Center the section */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    padding: 3rem; /* Padding inside the section */
+    max-width: 60rem; /* Increased max-width for a larger section */
+    margin-left: 230px;
+  }
+    
+  .title {
+    font-weight: bold;
+    color: #147efb; /* Blue color for the title */
+    font-family: 'Poppins', sans-serif; /* Font family for the title */
+    font-size: 17px; /* Font size for the title */
+    margin-bottom: 1rem; /* Space below the title */
+    text-transform: uppercase;
+  }
+
+.contact-info {
+    margin-top: 1rem; /* Space above contact info */
+    font-family: 'Mulish', sans-serif; /* Use Mulish font */
+    font-size: 1.7rem; /* Font size for contact text */
+    display: flex; /* Use flexbox for horizontal alignment */
+    gap: 10rem; /* Space between contact links */
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    color: #000; /* Black color for the text */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-link i {
+    margin-right: 0.5rem; /* Space between icon and text */
+    font-size: 2rem; /* Larger icon size */
+    color: #147efb; /* Blue color for the icon */
+}
+
+.contact-link:hover {
+    color: #000; /* Keep color black on hover */
+}
+
+.contact-link:active {
+    color: #000; /* Keep color black when clicked */
+}

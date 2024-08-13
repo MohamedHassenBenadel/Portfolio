@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Mulish:wght@400;600&display=swap');
+.main-container {
+    background-color: #f8f9fa; /* Light background color for the page */
+    padding: 1.5rem; /* Reduce padding around the page */
+    display: flex; /* Center content horizontally */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .home-section {
+    font-family: 'Poppins', sans-serif; /* Font family for the whole section */
+    position: relative; /* Ensure proper positioning for other elements if needed */
+    margin: 0 auto; /* Center the section */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    padding: 6rem; /* Reduce padding inside the section */
+    max-width: 50rem; /* Reduce max width for the section */
+  }
+  
+  .text-container {
+    color: #2d2e32; /* Text color */
+    flex: 2; /* 2/3 of the width */
+    padding-right: 1.5rem; /* Reduce space between text and image */
+  }
+  
+  .title {
+    font-family: 'Poppins', sans-serif; /* Font family for the title */
+    font-size: 55px; /* Slightly smaller font size for the title */
+    margin-bottom: 2rem; 
+    margin-top: 1.2rem;
+    line-height: 1.2; /* Adjust line height if needed */
+  }
+  
+  .subtitle {
+    font-family: 'Mulish', sans-serif; /* Font family for the subtitle */
+    font-size: 18px; /* Slightly smaller font size for the subtitle */
+    margin: 0; /* Remove default margins */
+    line-height: 1.5; /* Adjust line height for readability */
+  }
+  
+  .image-container {
+    flex: 1; /* 1/3 of the width */
+    display: flex; /* Use flexbox for image centering */
+    justify-content: center; /* Center image horizontally */
+  }
+  
+  .image-container img {
+    max-width: 100%; /* Ensure image fits within container */
+    height: auto; /* Maintain aspect ratio */
+    width: 300px; /* Slightly smaller width */
+    height: 250px; /* Slightly smaller height */
+    border-radius: 50%; /* Optional: Make the image round */
+  }
+  

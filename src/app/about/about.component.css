@@ -1,0 +1,67 @@
+/* Style for the whole page/container */
+.main-container {
+    background-color: #fff; /* Light background color for the page */
+    padding: 1.5rem; /* Padding around the page */
+    display: flex; /* Center content horizontally */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  /* About section styling */
+  .about-section {
+    font-family: 'Poppins', sans-serif; /* Font family for the section */
+    position: relative; /* Ensure proper positioning for other elements if needed */
+    margin: 0 auto; /* Center the section */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    padding: 3rem; /* Padding inside the section */
+    max-width: 50rem; /* Max width for consistency */
+  }
+  
+  /* Styling for the image container */
+  .image-container {
+    flex: 1; /* 1/2 of the width */
+    display: flex; /* Use flexbox for image centering */
+    justify-content: center; /* Center image horizontally */
+    padding-right: 1.5rem; /* Space between image and text */
+  }
+  
+  .image-container img {
+    max-width: 100%; /* Ensure image fits within container */
+    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Ensure image scales with container */
+    width: 41rem; /* Max width of image */
+    height: 20rem; /* Max height of image */
+    border-radius: 1.7rem;
+  }
+  
+  /* Styling for the text container */
+  .text-container {
+    flex: 1; /* 1/2 of the width */
+    color: #2d2e32; /* Text color */
+  }
+  
+  .title {
+    color: #147efb; /* Blue color for the title */
+    font-family: 'Poppins', sans-serif; /* Font family for the title */
+    font-size: 17px; /* Font size for the title */
+    margin-bottom: 1rem; /* Space below the title */
+    text-transform: uppercase;
+  }
+  
+  /* Subtitle styling */
+  .subtitle {
+    font-family: 'Mulish', sans-serif; /* Font family for the subtitle */
+    font-size: 25px; /* Font size for the subtitle */
+    color: #2d2e32; /* Black color for subtitle */
+    margin: 0; /* Remove default margins */
+    line-height: 1.4; /* Adjust line height for readability */
+  }
+  
+  /* Description styling */
+  .description {
+    font-family: 'Mulish', sans-serif; /* Font family for the description */
+    font-size: 14px; /* Font size for the description */
+    color: #2d2e32; /* Black color for description text */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+  
