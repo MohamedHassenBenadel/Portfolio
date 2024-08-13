@@ -48,8 +48,8 @@ mat-toolbar button {
   border: none;
   box-shadow: none;
   font-family: 'Poppins', sans-serif;
+  cursor: pointer; /* Change cursor to hand on hover */
 }
-
 
 button.mat-button {
   font-family: 'Poppins', sans-serif; /* Font family for buttons */
