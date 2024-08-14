@@ -63,3 +63,10 @@ button.mat-button {
 body {
   margin-top: 64px; /* Adjust this value based on the height of your toolbar */
 }
+
+/* Hide the navbar in responsive view */
+@media (max-width: 768px) {
+  mat-toolbar {
+    display: none;
+  }
+}

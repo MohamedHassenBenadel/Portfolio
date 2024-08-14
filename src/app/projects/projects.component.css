@@ -1,115 +1,183 @@
 .main-container {
-    background-color: #fff; /* Light background color for the page */
-    display: flex; /* Center content horizontally */
-    justify-content: center; /* Center content horizontally */
-  }
-  
+  background-color: #fff; /* Light background color for the page */
+  display: flex; /* Center content horizontally */
+  justify-content: center; /* Center content horizontally */
+}
+
+.projects-section {
+  font-family: 'Poppins', sans-serif; /* Font family for the section */
+  position: relative; /* Ensure proper positioning for other elements if needed */
+  margin: 0 ; /* Center the section */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  padding: 3rem; 
+  max-width: 60rem; 
+}
+
+.title {
+  font-weight: bold;
+  color: #147efb; /* Blue color for the title */
+  font-family: 'Poppins', sans-serif; /* Font family for the title */
+  font-size: 17px; /* Font size for the title */
+  margin-bottom: 1rem; /* Space below the title */
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex; /* Use flexbox to divide the container */
+  gap: 1rem; /* Space between the image and description */
+}
+
+.image-container {
+  width: 480px; /* Set the width of the container */
+  height: 231px; /* Set the height of the container */
+  overflow: hidden; /* Hide any part of the image that exceeds the container */
+  border-radius: 8px; /* Optional: for rounded corners */
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale the image to cover the container while maintaining aspect ratio */
+}
+
+.description {
+  flex: 1; /* Take up the remaining half of the container */
+}
+
+.description h2 {
+  margin-top: -0.4rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.description p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.tools {
+  margin-top: 1rem; /* Space above the tools section */
+  display: flex; /* Use flexbox to align the tools */
+  gap: 0.5rem; /* Space between the tools */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.tool {
+  background-color: #d7e8fb; /* Background color for the tool badges */
+  color: #333; /* Text color */
+  padding: 0.5rem 1rem; /* Padding inside the badge */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Card shadow */
+  font-size: 0.8rem; /* Font size for the badge */
+  font-weight: bold;
+}
+
+.github-link, .demo-link {
+  display: flex;
+  align-items: center;
+  color: #000; /* Black color for the text */
+  font-size: 1rem; /* Font size */
+  text-decoration: none; /* Remove underline */
+  margin-top: 1rem;
+}
+
+.github-link i, .demo-link i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Size of the icon */
+}
+
+.github-link:hover {
+  color: #000; /* Keep color black on hover */
+}
+
+.github-link:active {
+  color: #000; /* Keep color black when clicked */
+}
+
+.demo-link {
+  color: #000; /* Black color for the text */
+}
+
+.demo-link:hover {
+  color: #000; /* Keep color black on hover */
+}
+
+.demo-link:active {
+  color: #000; /* Keep color black when clicked */
+}
+
+.links-container {
+  display: flex; /* Align links horizontally */
+  gap: 1rem; /* Space between the links */
+  margin-top: 1rem; /* Space above the links container */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
   .projects-section {
-    font-family: 'Poppins', sans-serif; /* Font family for the section */
-    position: relative; /* Ensure proper positioning for other elements if needed */
-    margin: 0 auto; /* Center the section */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    padding: 3rem; /* Padding inside the section */
-    max-width: 60rem; /* Increased max-width for a larger section */
+    padding: 2rem; /* Reduce padding for smaller screens */
+    max-width: 90%; /* Increase width for smaller screens */
   }
-    
-  .title {
-    font-weight: bold;
-    color: #147efb; /* Blue color for the title */
-    font-family: 'Poppins', sans-serif; /* Font family for the title */
-    font-size: 17px; /* Font size for the title */
-    margin-bottom: 1rem; /* Space below the title */
-    text-transform: uppercase;
-  }
-  
+
   .content {
-    display: flex; /* Use flexbox to divide the container */
-    gap: 1rem; /* Space between the image and description */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 1rem; /* Space between image and description */
   }
-  
+
   .image-container {
-    width: 480px; /* Set the width of the container */
-    height: 231px; /* Set the height of the container */
-    overflow: hidden; /* Hide any part of the image that exceeds the container */
-    border-radius: 8px; /* Optional: for rounded corners */
-    position: relative;
+    width: 100%; /* Make the image container full width */
+    height: auto; /* Adjust height automatically */
   }
-  
-  .image-container img {
-    width:100%;
-    height: 100%;
-    object-fit: cover; /* Scale the image to cover the container while maintaining aspect ratio */
-  }
-    
-  .description {
-    flex: 1; /* Take up the remaining half of the container */
-  }
-  
+
   .description h2 {
-    margin-top: -0.4rem;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
   }
-  
+
   .description p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
-  
+
   .tools {
-    margin-top: 1rem; /* Space above the tools section */
-    display: flex; /* Use flexbox to align the tools */
-    gap: 0.5rem; /* Space between the tools */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-direction: wrap; /* Stack tool badges vertically */
+    gap: 0.5rem; /* Space between badges */
   }
-  
+
   .tool {
-    background-color: #d7e8fb; /* Background color for the tool badges */
-    color: #333; /* Text color */
-    padding: 0.5rem 1rem; /* Padding inside the badge */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Card shadow */
-    font-size: 0.8rem; /* Font size for the badge */
-    font-weight: bold;
+    font-size: 0.7rem; /* Adjust font size for smaller screens */
+    padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
   }
-  
 
   .github-link, .demo-link {
-    display: flex;
-    align-items: center;
-    color: #000; /* Black color for the text */
-    font-size: 1rem; /* Font size */
-    text-decoration: none; /* Remove underline */
-    margin-top: 1rem;
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
-  
-  .github-link i, .demo-link i {
-    margin-right: 0.5rem; /* Space between icon and text */
-    font-size: 1.2rem; /* Size of the icon */
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 1rem; /* Further reduce padding for very small screens */
   }
-  
-  .github-link:hover {
-    color: #000; /* Keep color black on hover */
+
+  .description h2 {
+    font-size: 1rem; /* Adjust font size for very small screens */
   }
-  
-  .github-link:active {
-    color: #000; /* Keep color black when clicked */
+
+  .description p {
+    font-size: 0.8rem; /* Adjust font size for very small screens */
   }
-  .demo-link {
-    color: #000; /* Black color for the text */
+
+  .tools {
+    flex-direction: wrap; /* Stack tool badges vertically */
+    gap: 0.5rem; /* Space between badges */
   }
-  
-  .demo-link:hover {
-    color: #000; /* Keep color black on hover */
+
+  .tool {
+    font-size: 0.6rem; /* Further adjust font size for very small screens */
+    padding: 0.3rem 0.6rem; /* Further adjust padding for very small screens */
   }
-  
-  .demo-link:active {
-    color: #000; /* Keep color black when clicked */
+
+  .github-link, .demo-link {
+    font-size: 0.8rem; /* Adjust font size for very small screens */
   }
-  .links-container {
-    display: flex; /* Align links horizontally */
-    gap: 1rem; /* Space between the links */
-    margin-top: 1rem; /* Space above the links container */
-  }
-  
+}

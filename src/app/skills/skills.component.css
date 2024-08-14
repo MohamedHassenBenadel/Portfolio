@@ -75,3 +75,24 @@
   .spacer {
     height: 5px; /* Creates vertical space */
 }
+/* Media query for responsive text size */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+  .card-header h2 {
+    font-size: 1.2rem; /* Smaller font size for the header text on smaller screens */
+  }
+  
+  .card-header .icon {
+    font-size: 2.5rem; /* Adjust icon size for smaller screens */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) { /* Adjust the max-width as needed */
+  .card-header h2 {
+    font-size: 1rem; /* Even smaller font size for very small screens */
+  }
+  
+  .card-header .icon {
+    font-size: 2rem; /* Further adjustment to icon size */
+  }
+}
