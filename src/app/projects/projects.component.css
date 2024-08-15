@@ -162,15 +162,19 @@
   position: relative;
   margin: 5% auto;
   padding: 0;
-  width: 80%; /* Default width */
+  width: 90%; /* Default width */
   max-width: 800px; /* Maximum width */
 }
 
-/* Adjust modal content for small screens */
 @media (max-width: 768px) {
   .modal-content {
     width: 90%; /* More width on small screens */
     max-width: none; /* Remove the max-width constraint */
+    margin: auto; /* Center horizontally */
+    position: absolute; /* Positioning for vertical centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
   }
 }
 
@@ -178,6 +182,11 @@
 @media (max-width: 480px) {
   .modal-content {
     width: 95%; /* Even more width on very small screens */
+    margin: auto; /* Center horizontally */
+    position: absolute; /* Positioning for vertical centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
   }
 }
 
@@ -186,8 +195,14 @@
   .modal-content {
     width: 100%; /* Full width on extra small screens */
     max-width: none; /* Remove the max-width constraint */
+    margin: auto; /* Center horizontally */
+    position: absolute; /* Positioning for vertical centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
   }
 }
+
 
 .modal-slides {
   position: relative;
@@ -266,5 +281,27 @@
     top: 5px;
     right: 10px;
     font-size: 24px;
+  }
+}
+
+/* Responsive image container */
+@media (max-width: 1200px) {
+  .image-container {
+    width: 400px; /* Reduced width for medium screens */
+    height: 200px; /* Adjusted height */
+  }
+}
+
+@media (max-width: 992px) {
+  .image-container {
+    width: 300px; /* Further reduced width */
+    height: 150px; /* Adjusted height */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Adjust height automatically */
   }
 }
