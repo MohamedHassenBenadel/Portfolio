@@ -57,7 +57,6 @@
 @media (max-width: 768px) {
     .home-section {
         flex-direction: column; /* Stack text and image vertically on smaller screens */
-        padding: 4rem; /* Reduce padding inside the section */
     }
 
     .text-container {
@@ -88,5 +87,24 @@
     .image-container img {
         width: 150px; /* Adjust image width */
         height: 150px; /* Adjust image height */
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 30px; /* Further reduce font size for very small screens */
+    }
+
+    .subtitle {
+        font-size: 14px; /* Further reduce font size for very small screens */
+    }
+
+    .image-container img {
+        width: 120px; /* Further reduce image width */
+        height: 120px; /* Further reduce image height */
+    }
+
+    .home-section {
+        padding: 1rem; /* Minimal padding for very small screens */
     }
 }

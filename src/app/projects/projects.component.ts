@@ -7,32 +7,55 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  // Define properties with correct types
-  private modal: HTMLDivElement | null = null;
-  private mainImage: HTMLImageElement | null = null;
-  private closeModal: HTMLSpanElement | null = null;
+  private modal: HTMLElement | null = null;
+  private slideIndex: number = 1;
 
   ngOnInit(): void {
-    // Initialize properties with correct DOM elements
-    this.modal = document.getElementById('imageModal') as HTMLDivElement;
-    this.mainImage = document.getElementById('mainImage') as HTMLImageElement;
-    this.closeModal = document.getElementById('modalClose') as HTMLSpanElement;
+    this.modal = document.getElementById('imageModal');
+    this.showSlides(this.slideIndex);
 
-    // Ensure elements exist before attaching event listeners
-    if (this.mainImage && this.modal && this.closeModal) {
-      this.mainImage.onclick = () => {
-        this.modal!.style.display = 'block';
+    // Handle open and close modal
+    document.querySelectorAll('.demo-link').forEach(link => {
+      (link as HTMLElement).onclick = (event: Event) => {
+        event.preventDefault(); // Prevent default action
+        this.openModal();
       };
+    });
 
-      this.closeModal.onclick = () => {
-        this.modal!.style.display = 'none';
-      };
-
-      window.onclick = (event: MouseEvent) => {
-        if (event.target === this.modal) {
-          this.modal!.style.display = 'none';
-        }
-      };
+    const closeModal = document.getElementById('modalClose');
+    if (closeModal) {
+      closeModal.onclick = () => this.closeModal();
     }
+
+    window.onclick = (event: MouseEvent) => {
+      if (event.target === this.modal) {
+        this.closeModal();
+      }
+    };
+  }
+
+  openModal(): void {
+    if (this.modal) {
+      this.modal.style.display = 'block';
+    }
+  }
+
+  closeModal(): void {
+    if (this.modal) {
+      this.modal.style.display = 'none';
+    }
+  }
+
+  showSlides(n: number): void {
+    const slides = document.querySelectorAll('.modal-slide');
+    if (n > slides.length) { this.slideIndex = 1; }
+    if (n < 1) { this.slideIndex = slides.length; }
+    slides.forEach((slide, index) => {
+      (slide as HTMLElement).style.display = (index + 1 === this.slideIndex) ? 'block' : 'none';
+    });
+  }
+
+  plusSlides(n: number): void {
+    this.showSlides(this.slideIndex += n);
   }
 }

@@ -1,82 +1,97 @@
 /* Container for the main content */
 .main-container {
-    background-color: #f8f9fa; /* Light background color for the page */
-    padding: 1.5rem; /* Padding around the page */
-    display: flex; /* Use flexbox to lay out the sections */
-    flex-wrap: wrap; /* Allow wrapping of sections */
-    justify-content: center; /* Center content horizontally */
-  }
-  
-  /* Individual skills section styling */
-  .skills-section {
-    font-family: 'Poppins', sans-serif; /* Font family for the section */
-    margin: 0.5rem; /* Margin around each section */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-  }
-  
-  /* Card styling */
-  .card {
-    background-color: #fff; /* Card background color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Card shadow */
-    padding: 3rem; /* Padding inside the card */
-    max-width: 300px; 
-    min-height: 320px; /* Minimum height for the card */
-    margin: 1rem; /* Margin around the card */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Column direction for header and body */
-    align-items: center; /* Center items horizontally */
-  }
-    
-  /* Header styling */
-  .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;    
-    margin-top: -1.5rem;
-
-  }
-  
-  .card-header h2 {
-    font-family: 'Poppins', sans-serif; /* Font for the header */
-    font-size: 1.5rem; /* Font size for the header */
-    color: #2d2e32; /* Text color */
-    margin: -0.5rem;
-  }
-  
-  .card-header .icon {
-    font-size: 3rem; /* Adjust icon size */
-    color: #007bff; /* Icon color */
-    margin-top: 0.5rem;
-  }
-  
-  /* Body styling */
-  .card-body {
-    display: flex; /* Flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-  }
-  
-  .tech-icons {
-    display: flex; /* Flexbox for icons */
-    flex-direction: column; /* Stack icons vertically */
-    gap: 1rem; /* Space between icons */
-    width: 3rem; /* Set icon size */
-    height: 3rem; /* Set icon size */  
-  }
-  
-  .tech-icons i {
-    width: 3rem; /* Set icon size */
-    height: 3rem; /* Set icon size */  
-    font-size: 2rem; /* Icon size */
-    color: #2d2e32; /* Icon color */
-  }
-  .spacer {
-    height: 5px; /* Creates vertical space */
+  background-color: #f8f9fa; /* Light background color for the page */
+  padding: 1.5rem; /* Padding around the page */
+  display: flex; /* Use flexbox to lay out the sections */
+  flex-wrap: wrap; /* Allow wrapping of sections */
+  justify-content: center; /* Center content horizontally */
 }
-/* Media query for responsive text size */
-@media (max-width: 768px) { /* Adjust the max-width as needed */
+
+/* Individual skills section styling */
+.skills-section {
+  font-family: 'Poppins', sans-serif; /* Font family for the section */
+  margin: 0.5rem; /* Margin around each section */
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center content horizontally */
+  gap: 1rem; /* Space between cards */
+}
+
+/* Card styling */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem; /* Adjust padding inside the card */
+  width: calc(33.333% - 2rem); /* Responsive width with margins */
+  min-width: 300px; /* Minimum width for each card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Allow cards to grow equally */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Header styling */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem; /* Adjust margin */
+}
+
+.card-header h2 {
+  font-family: 'Poppins', sans-serif; /* Font for the header */
+  font-size: 1.5rem; /* Font size for the header */
+  color: #2d2e32; /* Text color */
+  margin: 0;
+}
+
+.card-header .icon {
+  font-size: 3rem; /* Adjust icon size */
+  color: #007bff; /* Icon color */
+  margin-top: 0.5rem;
+}
+
+/* Body styling */
+.card-body {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Tech icons styling */
+.tech-icons {
+  display: flex; /* Flexbox for icons */
+  flex-direction: column; /* Vertical layout on larger screens */
+  flex-wrap: wrap; /* Wrap icons if needed */
+  justify-content: center; /* Center icons horizontally */
+  gap: 1rem; /* Space between icons */
+}
+
+.tech-icon {
+  width: 3rem; /* Set icon size */
+  height: 3rem; /* Set icon size */  
+}
+
+/* Spacer */
+.spacer {
+  height: 1rem; /* Creates vertical space */
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 2rem); /* Two cards per row */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 2rem); /* Full width for mobile screens */
+  }
+  
   .card-header h2 {
     font-size: 1.2rem; /* Smaller font size for the header text on smaller screens */
   }
@@ -84,15 +99,47 @@
   .card-header .icon {
     font-size: 2.5rem; /* Adjust icon size for smaller screens */
   }
+  
+  /* Adjust tech icons layout for smaller screens */
+  .tech-icons {
+    flex-direction: row; /* Horizontal layout on smaller screens */
+    gap: 0.5rem; /* Space between icons */
+  }
 }
 
 /* Further adjustments for very small screens */
-@media (max-width: 480px) { /* Adjust the max-width as needed */
+@media (max-width: 480px) {
   .card-header h2 {
     font-size: 1rem; /* Even smaller font size for very small screens */
   }
   
   .card-header .icon {
     font-size: 2rem; /* Further adjustment to icon size */
+  }
+  
+  /* Ensure tech icons are responsive on very small screens */
+  .tech-icons {
+    flex-direction: row; /* Keep horizontal layout */
+    gap: 0.3rem; /* Adjust spacing between icons */
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    width: calc(100% - 2rem); /* Full width for extra small screens */
+  }
+  
+  .card-header h2 {
+    font-size: 0.9rem; /* Smaller font size for extra small screens */
+  }
+  
+  .card-header .icon {
+    font-size: 1.8rem; /* Further adjustment to icon size */
+  }
+  
+  /* Ensure tech icons are responsive on extra small screens */
+  .tech-icons {
+    flex-direction: row; /* Keep horizontal layout */
+    gap: 0.2rem; /* Adjust spacing between icons */
   }
 }
