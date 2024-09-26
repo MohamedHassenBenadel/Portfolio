@@ -13,12 +13,10 @@ export class NavbarComponent implements OnInit {
   private scrollSubject = new Subject<void>();
 
   constructor(private router: Router) {
-    // Handle scroll events with throttling
     this.scrollSubject.pipe(throttleTime(100)).subscribe(() => this.onScroll());
   }
 
   ngOnInit() {
-    // Initial scroll event to set the current section
     this.onScroll();
   }
 

@@ -1,24 +1,24 @@
 <section id="projects">
-  <div class="main-container">
-    <div class="projects-section">
-      <div class="title">Projects</div>
+  <div class="page-wrapper">
+    <div class="project-overview">
+      <div class="section-title">Projects</div>
 
-      <!-- First Project -->
-      <div class="content">
-        <div class="image-container">
+      <!-- First Project: Smart Agriculture System -->
+      <div class="project-content">
+        <div class="image-box">
           <img src="assets/Visualisation.PNG" alt="Project Image" (click)="openModal()">
         </div>
-        <div class="description">
+        <div class="project-description">
           <h2>Smart Agriculture System</h2>
           <p>This project enables users to monitor agricultural parameters in real-time, control actuators, and analyze plant health using computer vision.</p>
-          <div class="tools">
-            <span class="tool">Angular</span>
-            <span class="tool">Spring Boot</span>
-            <span class="tool">IoT</span>
-            <span class="tool">ESP32</span>
-            <span class="tool">Raspberry Pi</span>
+          <div class="tech-stack">
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">Spring Boot</span>
+            <span class="tech-badge">IoT</span>
+            <span class="tech-badge">ESP32</span>
+            <span class="tech-badge">Raspberry Pi</span>
           </div>
-          <div class="links-container">
+          <div class="link-buttons">
             <a href="#" class="demo-link">
               <i class="fas fa-images"></i> Gallery
             </a>
@@ -26,32 +26,28 @@
         </div>
       </div>
       <br><br>
-      <!-- Second Project 
-      <div class="content">
-        <div class="image-container">
-          <img src="assets/NodeRed.PNG" alt="Another Project Image" (click)="openModal()">
+
+      <!-- Second Project: Italian Dream -->
+      <div class="project-content">
+        <div class="image-box">
+          <img src="../../assets/ItalianDreamPicture.PNG" alt="Italian Dream Project Image">
         </div>
-        <div class="description">
-          <h2>Another Project</h2>
-          <p>This project focuses on another innovative technology and provides users with unique features.</p>
-          <div class="tools">
-            <span class="tool">Technology1</span>
-            <span class="tool">Technology2</span>
-            <span class="tool">Technology3</span>
+        <div class="project-description">
+          <h2>Italian Dream ( In process )</h2>
+          <p>This project involves the development of a website and client portal for an agency that helps students pursue higher education in Italy. The website offers detailed program information, while the client portal provides a personalized dashboard for managing applications and communications with the agency.</p>
+          <div class="tech-stack">
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">Spring Boot</span>
+            <span class="tech-badge">Postgres</span>
           </div>
-          <div class="links-container">
-            <a href="https://github.com/another-repo" class="github-link" target="_blank">
-              <i class="fab fa-github"></i> Go to code
-            </a>
-            <a href="" class="demo-lik">
-              <i class="fas fa-play"></i> Demo
+          <div class="link-buttons">
+            <a href="https://github.com/MohamedHassenBenadel/ItalianDream" class="github-link">
+              <i class="fab fa-github"></i> GitHub
             </a>
           </div>
         </div>
       </div>
-
-    -->
-
     </div>
   </div>
 
@@ -71,6 +67,7 @@
         <img class="modal-slide" src="assets/camera.png" alt="Image 9">
         <img class="modal-slide" src="assets/detection.png" alt="Image 10">
       </div>
+      <!-- Navigation buttons outside of images -->
       <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
       <a class="next" (click)="plusSlides(1)">&#10095;</a>
     </div>
