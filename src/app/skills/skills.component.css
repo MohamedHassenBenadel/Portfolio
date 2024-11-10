@@ -1,145 +1,101 @@
-/* Container for the main content */
+/* Main container styling */
 .main-container {
-  background-color: #f8f9fa; /* Light background color for the page */
-  padding: 1.5rem; /* Padding around the page */
-  display: flex; /* Use flexbox to lay out the sections */
-  flex-wrap: wrap; /* Allow wrapping of sections */
-  justify-content: center; /* Center content horizontally */
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
-/* Individual skills section styling */
+/* Skills section */
 .skills-section {
-  font-family: 'Poppins', sans-serif; /* Font family for the section */
-  margin: 0.5rem; /* Margin around each section */
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow cards to wrap */
-  justify-content: center; /* Center content horizontally */
-  gap: 1rem; /* Space between cards */
-}
-
-/* Card styling */
-.card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem; /* Adjust padding inside the card */
-  width: calc(33.333% - 2rem); /* Responsive width with margins */
-  min-width: 300px; /* Minimum width for each card */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1; /* Allow cards to grow equally */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-}
-
-/* Header styling */
-.card-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem; /* Adjust margin */
-}
-
-.card-header h2 {
-  font-family: 'Poppins', sans-serif; /* Font for the header */
-  font-size: 1.5rem; /* Font size for the header */
-  color: #2d2e32; /* Text color */
+  gap: 2rem;
+  max-width: 1600px;
   margin: 0;
 }
 
-.card-header .icon {
-  font-size: 3rem; /* Adjust icon size */
-  color: #007bff; /* Icon color */
-  margin-top: 0.5rem;
+/* Skill category titles */
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align each skill category to the left */
+  text-align: left; /* Align text within skill category to the left */
 }
 
-/* Body styling */
-.card-body {
-  display: flex; /* Flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+.skills-header {
+  font-size: 30px;
+  color: #147efb;
+  font-weight: bold; /* Bold for emphasis */
+  text-align: center; /* Center-aligns header */
+  margin-bottom: -30px;
 }
 
-/* Tech icons styling */
-.tech-icons {
-  display: flex; /* Flexbox for icons */
-  flex-direction: column; /* Vertical layout on larger screens */
-  flex-wrap: wrap; /* Wrap icons if needed */
-  justify-content: center; /* Center icons horizontally */
-  gap: 1rem; /* Space between icons */
+
+/* Skill category titles */
+.skill-category h2 {
+  font-size: 1.5rem;
+  color: #2d2e32;
 }
 
-.tech-icon {
-  width: 3rem; /* Set icon size */
-  height: 3rem; /* Set icon size */  
+/* Container for tech badges with centered alignment */
+.tech-badge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align tech badges to the left */
 }
 
-/* Spacer */
-.spacer {
-  height: 1rem; /* Creates vertical space */
+/* Tech badge line to maintain spacing */
+.tech-badge-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Adjust the gap between badges */
+  justify-content: flex-start; /* Start new line from left */
 }
 
-/* Media query for tablets and smaller screens */
-@media (max-width: 1024px) {
-  .card {
-    width: calc(50% - 2rem); /* Two cards per row */
-  }
+/* Tech badge styling */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  width: 175px;
+  height: 50px;
+  font-weight: bold;
+  color: #2d2e32;
+  box-sizing: border-box;
 }
 
-/* Media query for mobile devices */
+/* Aligning icon and text */
+.tech-badge img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.tech-badge span {
+  text-align: left;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .card {
-    width: calc(100% - 2rem); /* Full width for mobile screens */
+  .skills-section {
+    align-items: center; /* Left-align on smaller screens as well */
   }
-  
-  .card-header h2 {
-    font-size: 1.2rem; /* Smaller font size for the header text on smaller screens */
+  .skill-category h2 {
+    text-align: flex-start; /* Center-align titles on smaller screens */
+    width: 100%; /* Make title take full width for centering */
   }
-  
-  .card-header .icon {
-    font-size: 2.5rem; /* Adjust icon size for smaller screens */
-  }
-  
-  /* Adjust tech icons layout for smaller screens */
-  .tech-icons {
-    flex-direction: row; /* Horizontal layout on smaller screens */
-    gap: 0.5rem; /* Space between icons */
-  }
+
+  /* Skills section */
+.skills-section {
+  max-width: auto;
+
+  padding-left: 0;
+  margin: 0 auto;
 }
 
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-  .card-header h2 {
-    font-size: 1rem; /* Even smaller font size for very small screens */
-  }
-  
-  .card-header .icon {
-    font-size: 2rem; /* Further adjustment to icon size */
-  }
-  
-  /* Ensure tech icons are responsive on very small screens */
-  .tech-icons {
-    flex-direction: row; /* Keep horizontal layout */
-    gap: 0.3rem; /* Adjust spacing between icons */
-  }
-}
 
-@media (max-width: 320px) {
-  .card {
-    width: calc(100% - 2rem); /* Full width for extra small screens */
-  }
-  
-  .card-header h2 {
-    font-size: 0.9rem; /* Smaller font size for extra small screens */
-  }
-  
-  .card-header .icon {
-    font-size: 1.8rem; /* Further adjustment to icon size */
-  }
-  
-  /* Ensure tech icons are responsive on extra small screens */
-  .tech-icons {
-    flex-direction: row; /* Keep horizontal layout */
-    gap: 0.2rem; /* Adjust spacing between icons */
-  }
 }

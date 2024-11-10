@@ -1,17 +1,16 @@
 /* Main container styling */
 .page-wrapper {
-  background-color: #fff; /* Light background color */
+  background-color: #fff;
   display: flex;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
 }
 
 /* Projects section styling */
 .project-overview {
   font-family: 'Poppins', sans-serif;
-  position: relative;
-  margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 3rem;
   max-width: 60rem;
 }
@@ -21,16 +20,19 @@
   font-weight: bold;
   color: #147efb;
   font-family: 'Poppins', sans-serif;
-  font-size: 17px;
+  font-size: 30px;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 /* Content styling */
 .project-content {
   display: flex;
+  flex-direction: column; /* Stack image on top of description */
+  align-items: center; /* Center the items */
   gap: 1rem;
-  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 /* Image container styling */
@@ -39,24 +41,34 @@
   height: 231px;
   overflow: hidden;
   border-radius: 8px;
-  position: relative;
 }
 
-/* Image styling */
+.image-box {
+  width: 700px;  /* Increase width */
+  height: 350px; /* Increase height */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Image styling remains the same */
 .image-box img {
   width: 100%;
-  height: 115%;
+  height: 100%;
   object-fit: contain;
 }
 
+
+
 /* Description styling */
 .project-description {
-  flex: 1;
+  text-align: center; /* Center the description text */
+  max-width: 75%; /* Control width for better readability */
 }
 
 .project-description h2 {
   font-size: 1.3rem;
   margin-top: -5px;
+  font-weight: bold;
 }
 
 .project-description p {
@@ -64,12 +76,13 @@
   line-height: 1.6;
 }
 
-/* Tools section styling */
+/* Tool badges */
 .tech-stack {
   margin-top: 1rem;
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Tool badge styling */
@@ -88,9 +101,10 @@
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content: center;
 }
 
-/* Link styling for demo-link */
+/* Link styling */
 .github-link,
 .demo-link {
   display: flex;
@@ -98,23 +112,12 @@
   color: #000;
   font-size: 1rem;
   text-decoration: none;
-  margin-top: 1rem;
 }
 
 .github-link i,
 .demo-link i {
   margin-right: 0.5rem;
   font-size: 1.2rem;
-}
-
-.github-link:hover,
-.demo-link:hover {
-  color: #000;
-}
-
-.github-link:active,
-.demo-link:active {
-  color: #000;
 }
 
 /* Modal styles */
@@ -136,144 +139,103 @@
   padding: 0;
   width: 90%; /* Default width */
   max-width: 800px; /* Maximum width */
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .modal-content {
-    width: 90%; /* More width on small screens */
-    max-width: none; /* Remove the max-width constraint */
-    margin: auto; /* Center horizontally */
-    position: absolute; /* Positioning for vertical centering */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to center */
-  }
-}
-
-/* Adjust modal content for very small screens */
-@media (max-width: 480px) {
-  .modal-content {
-    width: 95%; /* Even more width on very small screens */
-    margin: auto; /* Center horizontally */
-    position: absolute; /* Positioning for vertical centering */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to center */
-  }
-}
-
-/* Adjust modal content for extra small screens */
-@media (max-width: 320px) {
-  .modal-content {
-    width: 100%; /* Full width on extra small screens */
-    max-width: none; /* Remove the max-width constraint */
-    margin: auto; /* Center horizontally */
-    position: absolute; /* Positioning for vertical centering */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to center */
-  }
-}
-
-
-.modal-slides {
-  position: relative;
-}
-
+/* Set a max-width and height for the images inside the modal */
 .modal-slide {
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width */
-  height: auto; /* Auto height */
+  width: 100%; /* Image width inside the modal */
+  max-width: 600px; /* Maximum width of images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Center images with margin */
+  object-fit: contain; /* Ensure the image fits within the dimensions without distorting */
 }
 
-/* Navigation buttons */
-.prev, .next {
-  cursor: pointer;
+/* Navigation buttons outside of images */
+a.prev, a.next {
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
+  transform: translateY(-50%);
   color: #fff;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-/* Responsive design for modal navigation buttons */
+a.prev {
+  left: 10px;
+}
+
+a.next {
+  right: 10px;
+}
+
+
+
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .prev, .next {
-    padding: 12px;
-    font-size: 16px;
+  .project-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
   }
 
-  .close {
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
+  .image-box {
+    width: 100%;
+    height: auto; /* Adjust height for smaller screens */
+    margin-bottom: 1rem;
+  }
+
+  .project-description {
+    max-width: 90%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .modal-slide {
+    width: 100%;
+  }
+
+  .github-link,
+  .demo-link {
+    font-size: 0.9rem;
+  }
+
+  a.prev, a.next {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .prev, .next {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .close {
-    top: 8px;
-    right: 15px;
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 320px) {
-  .prev, .next {
-    padding: 8px;
-    font-size: 12px;
-  }
-
-  .close {
-    top: 5px;
-    right: 10px;
+  .section-title {
     font-size: 24px;
   }
-}
 
-/* Responsive image container */
-@media (max-width: 1200px) {
-  .image-container {
-    width: 400px; /* Reduced width for medium screens */
-    height: 200px; /* Adjusted height */
+  .project-description h2 {
+    font-size: 1.1rem;
   }
-}
 
-@media (max-width: 992px) {
-  .image-container {
-    width: 300px; /* Further reduced width */
-    height: 150px; /* Adjusted height */
+  .project-description p {
+    font-size: 0.9rem;
   }
-}
 
-@media (max-width: 768px) {
-  .image-container {
-    width: 100%; /* Full width on smaller screens */
-    height: auto; /* Adjust height automatically */
+  .tech-badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .link-buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image-box {
+    height: 200px;
   }
 }

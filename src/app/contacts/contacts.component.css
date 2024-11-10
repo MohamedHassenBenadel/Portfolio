@@ -55,40 +55,66 @@
 
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
-  .contact-section {
-      margin-left: 0; /* Remove left margin */
-  }
-
   .contact-info {
-      font-size: 1.5rem; /* Smaller font size */
-      gap: 5rem; /* Reduce space between contact links */
+    font-size: 1.5rem; /* Smaller font size */
+    gap: 5rem; /* Reduce space between contact links */
   }
 
   .contact-link i {
-      font-size: 1.5rem; /* Smaller icon size */
+    font-size: 1.5rem; /* Smaller icon size */
   }
 }
 
 @media (max-width: 992px) {
+
+  .main-container {
+    display:block;
+  }
+  
   .contact-info {
-      font-size: 1.3rem; /* Smaller font size */
-      gap: 3rem; /* Reduce space between contact links */
+    font-size: 1.3rem; /* Smaller font size */
+    gap: 3rem; /* Reduce space between contact links */
   }
 
   .contact-link i {
-      font-size: 1.3rem; /* Smaller icon size */
+    font-size: 1.3rem; /* Smaller icon size */
   }
 }
 
 @media (max-width: 768px) {
+
+  .main-container {
+    display:block;
+  }
+
+  .contact-section{
+    margin : 0 ; 
+  }
   .contact-info {
-      font-size: 1.1rem; /* Smaller font size */
-      gap: 1rem; /* Reduce space between contact links */
-      flex-direction: column; /* Stack contact links vertically */
-      align-items: center; /* Center contact links */
+    font-size: 1.1rem; /* Smaller font size */
+    gap: 1rem; /* Reduce space between contact links */
+    flex-direction: column; /* Stack contact links vertically */
+    align-items: center; /* Center contact links */
   }
 
   .contact-link i {
-      font-size: 1.1rem; /* Smaller icon size */
+    font-size: 1.1rem; /* Smaller icon size */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .main-container {
+    display:block;
+  }
+
+  .contact-info {
+    font-size: 1rem; /* Even smaller font size */
+    gap: 0.5rem; /* Even smaller space between contact links */
+    padding: 0  ; /* Further reduce padding */
+  }
+
+  .contact-link i {
+    font-size: 1rem; /* Smaller icon size */
   }
 }
