@@ -1,15 +1,12 @@
-/* Main container styling */
 .page-wrapper {
-  background-color: #fff;
+  background-color: #f8f9fa;
   display: flex;
   justify-content: center;
   padding-top: 20px;
-
 }
 
-/* Projects section styling */
 .project-overview {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,27 +14,24 @@
   max-width: 60rem;
 }
 
-/* Title styling */
 .section-title {
   font-weight: bold;
-  color: #147efb;
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
-  margin-bottom: 1rem;
+  color: #0284c7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   text-align: center;
 }
 
-/* Content styling */
 .project-content {
   display: flex;
-  flex-direction: column; /* Stack image on top of description */
-  align-items: center; /* Center the items */
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-/* Image container styling */
 .image-box {
   width: 480px;
   height: 231px;
@@ -46,25 +40,22 @@
 }
 
 .image-box {
-  width: 700px;  /* Increase width */
-  height: 350px; /* Increase height */
+  width: 700px;
+  height: 350px;
   overflow: hidden;
   border-radius: 8px;
 }
 
-/* Image styling remains the same */
 .image-box img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-
-
-/* Description styling */
 .project-description {
-  text-align: center; /* Center the description text */
-  max-width: 75%; /* Control width for better readability */
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  max-width: 75%;
 }
 
 .project-description h2 {
@@ -78,7 +69,6 @@
   line-height: 1.6;
 }
 
-/* Tool badges */
 .tech-stack {
   margin-top: 1rem;
   display: flex;
@@ -87,7 +77,6 @@
   justify-content: center;
 }
 
-/* Tool badge styling */
 .tech-badge {
   background-color: #d7e8fb;
   color: #333;
@@ -98,7 +87,6 @@
   font-weight: bold;
 }
 
-/* Links container styling */
 .link-buttons {
   display: flex;
   gap: 1rem;
@@ -106,7 +94,6 @@
   justify-content: center;
 }
 
-/* Link styling */
 .github-link,
 .demo-link {
   display: flex;
@@ -122,39 +109,37 @@
   font-size: 1.2rem;
 }
 
-/* Modal styles */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
   position: relative;
   margin: 5% auto;
   padding: 0;
-  width: 90%; /* Default width */
-  max-width: 800px; /* Maximum width */
+  width: 100%;
+  max-width: 1500px;
   text-align: center;
 }
 
-/* Set a max-width and height for the images inside the modal */
 .modal-slide {
-  width: 100%; /* Image width inside the modal */
-  max-width: 600px; /* Maximum width of images */
-  height: auto; /* Maintain aspect ratio */
-  margin: 10px auto; /* Center images with margin */
-  object-fit: contain; /* Ensure the image fits within the dimensions without distorting */
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 10px auto;
+  object-fit: contain;
 }
 
-/* Navigation buttons outside of images */
-a.prev, a.next {
+a.prev,
+a.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -174,10 +159,6 @@ a.next {
   right: 10px;
 }
 
-
-
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .project-content {
     flex-direction: column;
@@ -188,7 +169,7 @@ a.next {
 
   .image-box {
     width: 100%;
-    height: auto; /* Adjust height for smaller screens */
+    height: auto;
     margin-bottom: 1rem;
   }
 
@@ -209,7 +190,8 @@ a.next {
     font-size: 0.9rem;
   }
 
-  a.prev, a.next {
+  a.prev,
+  a.next {
     font-size: 1.5rem;
   }
 }

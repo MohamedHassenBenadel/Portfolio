@@ -1,97 +1,91 @@
-/* Style for the whole page/container */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding-top: 120px;
+}
+
 .main-container {
-  background-color: #fff; /* Light background color for the page */
-  padding: 1.5rem; /* Padding around the page */
-  display: flex; /* Center content horizontally */
-  justify-content: center; /* Center content horizontally */
+  width: 100%;
+  max-width: 1200px;
+  margin-top: -50px;
 }
 
-/* About section styling */
-.about-section {
-  font-family: 'Poppins', sans-serif; /* Font family for the section */
-  position: relative; /* Ensure proper positioning for other elements if needed */
-  margin: 0 auto; /* Center the section */
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Vertically center items */
-  padding: 3rem; /* Padding inside the section */
-  max-width: 50rem; /* Max width for consistency */
-}
-
-/* Styling for the image container */
-.image-container {
-  flex: 1; /* Flex grow and shrink */
-  display: flex; /* Use flexbox for image centering */
-  justify-content: center; /* Center image horizontally */
-  padding-right: 1.5rem; /* Space between image and text */
-}
-
-.image-container img {
-  max-width: 100%; /* Ensure image fits within container */
-  height: auto; /* Maintain aspect ratio */
-  width: 100%; /* Ensure image scales with container */
-  max-width: 41rem; /* Max width of image */
-  max-height: 20rem; /* Max height of image */
-  border-radius: 1.7rem;
-}
-
-/* Styling for the text container */
-.text-container {
-  flex: 1; /* Flex grow and shrink */
-  color: #2d2e32; /* Text color */
-}
-
-/* Title styling */
 .title {
-  color: #147efb; /* Blue color for the title */
-  font-family: 'Poppins', sans-serif; /* Font family for the title */
-  font-size: 1.1rem; /* Font size for the title */
-  margin-bottom: 1rem; /* Space below the title */
-  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0284c7;
 }
 
-/* Subtitle styling */
-.subtitle {
-  font-family: 'Mulish', sans-serif; /* Font family for the subtitle */
-  font-size: 1.5rem; /* Font size for the subtitle */
-  color: #2d2e32; /* Black color for subtitle */
-  margin: 0; /* Remove default margins */
-  line-height: 1.4; /* Adjust line height for readability */
+.about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* Description styling */
-.description {
-  font-family: 'Mulish', sans-serif; /* Font family for the description */
-  font-size: 1rem; /* Font size for the description */
-  color: #2d2e32; /* Black color for description text */
-  line-height: 1.6; /* Adjust line height for readability */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Responsive styles */
+.svg-image {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+}
+
+.text-container {
+  flex: 1;
+  color: #2d2e32;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .about-section {
-      flex-direction: column; /* Stack image and text vertically */
-      padding: 1.5rem; /* Reduce padding for smaller screens */
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .image-container {
-      padding-right: 0; /* Remove space between image and text */
-      margin-bottom: 1.5rem; /* Add space below image */
+  .svg-image {
+    width: 250px;
   }
 
-  .image-container img {
-      max-width: 100%; /* Ensure image fits within container */
-      max-height: 15rem; /* Reduce max height for smaller screens */
+  .text-container {
+    text-align: center;
+    font-size: 1rem;
   }
 
   .title {
-      font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .svg-image {
+    width: 200px;
   }
 
-  .subtitle {
-      font-size: 1.2rem; /* Adjust font size for smaller screens */
+  .text-container {
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
-  .description {
-      font-size: 0.9rem; /* Adjust font size for smaller screens */
+  .title {
+    font-size: 1.5rem;
   }
 }

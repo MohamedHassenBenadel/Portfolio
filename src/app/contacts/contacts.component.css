@@ -1,121 +1,93 @@
-.main-container {
-  background-color: #fff; /* Light background color for the page */
-  display: flex; /* Center content horizontally */
-  justify-content: center; /* Center content horizontally */
+#contact {
+  background-color: #f8f9fa;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
-.contact-section {
-  font-family: 'Poppins', sans-serif; /* Font family for the section */
-  position: relative; /* Ensure proper positioning for other elements if needed */
-  margin: 0 auto; /* Center the section */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  padding: 3rem; /* Padding inside the section */
-  max-width: 60rem; /* Increased max-width for a larger section */
-}
-
-.title {
+.contact-section .title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #147efb; /* Blue color for the title */
-  font-family: 'Poppins', sans-serif; /* Font family for the title */
-  font-size: 30px; /* Font size for the title */
-  margin-bottom: 1rem; /* Space below the title */
-  text-transform: uppercase;
-  text-align: center; /* Center-align the title */
+  color: #0284c7;
+  margin-bottom: 20px;
 }
 
-.contact-info {
-  font-family: 'Mulish', sans-serif; /* Use Mulish font */
-  font-size: 1.7rem; /* Font size for contact text */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack contact links vertically */
-  align-items: center; /* Center each contact link */
-  gap: 1rem; /* Add space between each contact link */
+.contact-section .text {
+  color: #2d2e32;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-.contact-link {
+.icons-container {
   display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-icon img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-icon img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.contact-icon img[alt="LinkedIn Logo"] {
+  margin-top: -9px;
+  width: 80px;
+  height: 80px;
+}
+.email {
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #2d2e32;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  color: #000; /* Black color for the text */
-  text-decoration: none; /* Remove underline */
+  gap: 10px;
 }
 
-.contact-link i {
-  margin-right: 0.5rem; /* Space between icon and text */
-  font-size: 2rem; /* Larger icon size */
-  color: #0077B5; /* Blue color for the icon */
+.email-icon {
+  font-size: 1.5rem;
+  color: #2d2e32;
 }
 
-.contact-link:hover {
-  color: #000; /* Keep color black on hover */
+.email a {
+  color: #2d2e32;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.contact-link:active {
-  color: #000; /* Keep color black when clicked */
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 1200px) {
-  .contact-info {
-    font-size: 1.5rem; /* Smaller font size */
-    gap: 5rem; /* Reduce space between contact links */
-  }
-
-  .contact-link i {
-    font-size: 1.5rem; /* Smaller icon size */
-  }
-}
-
-@media (max-width: 992px) {
-
-  .main-container {
-    display:block;
-  }
-  
-  .contact-info {
-    font-size: 1.3rem; /* Smaller font size */
-    gap: 3rem; /* Reduce space between contact links */
-  }
-
-  .contact-link i {
-    font-size: 1.3rem; /* Smaller icon size */
-  }
+.email a:hover {
+  color: #025f92;
 }
 
 @media (max-width: 768px) {
-
-  .main-container {
-    display:block;
+  .email {
+    font-size: 1rem;
+    gap: 8px;
   }
 
-  .contact-section{
-    margin : 0 ; 
-  }
-  .contact-info {
-    font-size: 1.1rem; /* Smaller font size */
-    gap: 1rem; /* Reduce space between contact links */
-    flex-direction: column; /* Stack contact links vertically */
-    align-items: center; /* Center contact links */
-  }
-
-  .contact-link i {
-    font-size: 1.1rem; /* Smaller icon size */
+  .email-icon {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
-
-  .main-container {
-    display:block;
+  .email {
+    font-size: 0.9rem;
+    gap: 5px;
   }
 
-  .contact-info {
-    font-size: 1rem; /* Even smaller font size */
-    gap: 0.5rem; /* Even smaller space between contact links */
-    padding: 0  ; /* Further reduce padding */
-  }
-
-  .contact-link i {
-    font-size: 1rem; /* Smaller icon size */
+  .email-icon {
+    font-size: 1rem;
   }
 }

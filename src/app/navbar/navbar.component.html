@@ -1,13 +1,43 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <span class="toolbar-title">Hassen</span>
+    <span class="toolbar-title">Hassen Dev</span>
     <span class="spacer"></span>
     <span class="toolbar-links">
-      <button mat-button [ngClass]="{'active': isActive('home')}" (click)="scrollTo('home')">Home</button>
-      <button mat-button [ngClass]="{'active': isActive('about')}" (click)="scrollTo('about')">About</button>
-      <button mat-button [ngClass]="{'active': isActive('skills')}" (click)="scrollTo('skills')">Skills</button>
-      <button mat-button [ngClass]="{'active': isActive('projects')}" (click)="scrollTo('projects')">Projects</button>
-      <button mat-button [ngClass]="{'active': isActive('contact')}" (click)="scrollTo('contact')">Contact</button>
+      <button
+        mat-button
+        [ngClass]="{ active: isActive('home') }"
+        (click)="scrollTo('home')"
+      >
+        Home
+      </button>
+      <button
+        mat-button
+        [ngClass]="{ active: isActive('about') }"
+        (click)="scrollTo('about')"
+      >
+        About
+      </button>
+      <button
+        mat-button
+        [ngClass]="{ active: isActive('skills') }"
+        (click)="scrollTo('skills')"
+      >
+        Skills
+      </button>
+      <button
+        mat-button
+        [ngClass]="{ active: isActive('projects') }"
+        (click)="scrollTo('projects')"
+      >
+        Projects
+      </button>
+      <button
+        mat-button
+        [ngClass]="{ active: isActive('contact') }"
+        (click)="scrollTo('contact')"
+      >
+        Contact
+      </button>
     </span>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -1,152 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Mulish:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Mulish:wght@400;600&display=swap");
 
 .main-container {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: center;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
 }
 
 .home-section {
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 6rem;
-    max-width: 50rem;
-    flex-direction: row;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 6rem;
+  max-width: 50rem;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
 .text-container {
-    color: #2d2e32;
-    flex: 2;
-    padding-right: 1.5rem;
+  color: #2d2e32;
+  flex: 2;
+  padding-right: 1.5rem;
 }
 
 .title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 55px;
-    margin-bottom: 2rem;
-    margin-top: 1.2rem;
-    line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
+  margin-bottom: 2rem;
+  margin-top: 1.2rem;
+  line-height: 1.2;
 }
 
 .subtitle {
-    font-family: 'Mulish', sans-serif;
-    font-size: 18px;
-    margin: 0;
-    line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  margin: 0;
+  line-height: 2.25rem;
+  margin: 30px;
+}
+
+.name {
+  color: #0284c7;
+  font-weight: bold;
 }
 
 .image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .image-container img {
-    max-width: 100%;
-    height: auto;
-    width: 300px;
-    height: 250px;
-    border-radius: 50%;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .home-section {
-        flex-direction: column;
-    }
-
-    .text-container {
-        flex: none;
-        padding-right: 0;
-        text-align: center;
-        order: 2; /* Make text appear after the image */
-    }
-
-    .image-container {
-        order: 1; /* Make the image appear first */
-        margin-bottom: 2rem; /* Add space between the image and text */
-    }
-
-    .image-container img {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 40px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    .image-container img {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 320px) {
-    .title {
-        font-size: 30px;
-    }
-
-    .subtitle {
-        font-size: 14px;
-    }
-
-    .image-container img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .home-section {
-        padding: 1rem;
-    }
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
 }
 
 .cv-download-button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #fff;
-    background-color: #2d2e32;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2d2e32;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
 }
 
 .cv-download-button:hover {
-    background-color: #4a4b4f;
+  background-color: #4a4b4f;
 }
 
-/* Media Queries for Responsive Button */
 @media (max-width: 768px) {
-    .cv-download-button {
-        font-size: 14px;
-        padding: 0.5rem 1rem;
-    }
+  .home-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-container {
+    order: 2;
+    padding-right: 0;
+  }
+
+  .image-container {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .image-container img {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 480px) {
-    .cv-download-button {
-        font-size: 12px;
-        padding: 0.4rem 0.8rem;
-    }
+  .home-section {
+    padding: 2rem;
+  }
+
+  .image-container img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+
+  .cv-download-button {
+    font-size: 12px;
+    padding: 0.4rem 0.8rem;
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 320px) {
-    .cv-download-button {
-        font-size: 10px;
-        padding: 0.3rem 0.6rem;
-    }
+  .home-section {
+    padding: 1rem;
+  }
+
+  .image-container img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.4rem;
+  }
+
+  .cv-download-button {
+    font-size: 10px;
+    padding: 0.3rem 0.6rem;
+    margin-left: 0px;
+  }
 }
