@@ -3,7 +3,7 @@
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .skills-section {
@@ -97,12 +97,12 @@
   .skill-category {
     flex-direction: column;
     gap: 1rem;
-    align-items: center; /* Center the items horizontally */
-    justify-content: center; /* Ensure vertical centering */
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
     border-radius: 8px;
-    width: 80%; /* Limit width to prevent it from stretching too wide */
-    margin: 0 auto; /* Center the frame horizontally */
+    width: 80%;
+    margin: 0 auto;
   }
 
   .skill-header h2 {
@@ -127,7 +127,7 @@
     .skill-category {
       padding: 0.8rem;
       border-radius: 6px;
-      width: 90%; /* Adjust width for smaller screens */
+      width: 90%;
     }
 
     .skill-header h2 {

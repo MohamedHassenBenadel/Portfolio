@@ -38,10 +38,9 @@ export class NavbarComponent implements OnInit {
         const elementTop = rect.top + scrollPosition;
         const elementBottom = rect.bottom + scrollPosition;
 
-        // Adjust the condition to ensure detection of sections including 'home'
         if (
           (scrollPosition >= elementTop - viewportHeight / 2 && scrollPosition < elementBottom - viewportHeight / 2) ||
-          (section === 'home' && scrollPosition === 0) // Special handling for 'home' section
+          (section === 'home' && scrollPosition === 0) 
         ) {
           currentSection = section;
           break;
@@ -49,7 +48,6 @@ export class NavbarComponent implements OnInit {
       }
     }
 
-    // Special handling for sections near the bottom
     if (scrollPosition + viewportHeight >= document.documentElement.scrollHeight - 100) {
       currentSection = 'contact';
     }

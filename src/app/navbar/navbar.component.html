@@ -19,6 +19,13 @@
       </button>
       <button
         mat-button
+        [ngClass]="{ active: isActive('experience') }"
+        (click)="scrollTo('experience')"
+      >
+        Experience
+      </button>
+      <button
+        mat-button
         [ngClass]="{ active: isActive('skills') }"
         (click)="scrollTo('skills')"
       >

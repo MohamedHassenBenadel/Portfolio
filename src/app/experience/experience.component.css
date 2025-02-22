@@ -1,0 +1,179 @@
+#experience {
+  background: #f9f9f9;
+  padding-top: 60px;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0284c7;
+  margin-bottom: 40px;
+}
+
+.experience-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.timeline {
+  position: absolute;
+  left: 26px;
+  top: 34px;
+  bottom: 25px;
+  width: 4px;
+  background: #0284c7;
+}
+
+.experience-content {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: 60px;
+}
+
+.experience-card {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+.point {
+  width: 12px;
+  height: 12px;
+  background: #0284c7;
+  border-radius: 50%;
+  position: absolute;
+  left: -37px;
+  top: 7px;
+}
+
+.company-and-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.company {
+  font-size: 1rem;
+  color: #666;
+  font-weight: bold;
+  flex: 1;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 20px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #2d2e32;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline {
+    left: 10px;
+  }
+
+  .experience-content {
+    margin-left: 40px;
+  }
+
+  .experience-card {
+    padding-left: 20px;
+  }
+
+  .point {
+    left: -14px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .company {
+    font-size: 0.9rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+
+  li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .timeline {
+    left: 8px;
+  }
+
+  .experience-content {
+    margin-left: 30px;
+  }
+
+  .experience-card {
+    padding-left: 15px;
+  }
+
+  .point {
+    left: -11px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .company {
+    font-size: 0.85rem;
+  }
+
+  .date {
+    font-size: 0.75rem;
+  }
+
+  li {
+    font-size: 0.85rem;
+  }
+}

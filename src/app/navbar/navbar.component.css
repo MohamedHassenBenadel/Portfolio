@@ -25,13 +25,13 @@ mat-toolbar .toolbar-links button {
 }
 
 mat-toolbar .toolbar-links {
-  display: flex; /* Align buttons horizontally */
-  gap: 1em; /* Optional: Adds space between buttons */
+  display: flex;
+  gap: 1em;
 }
 
 mat-toolbar button.active {
   color: #0284c7;
-  border-bottom: 2px solid #0284c7; /* Underline effect */
+  border-bottom: 2px solid #0284c7;
 }
 
 mat-toolbar button {
@@ -48,23 +48,21 @@ mat-toolbar button {
   border: none;
   box-shadow: none;
   font-family: "Poppins", sans-serif;
-  cursor: pointer; /* Change cursor to hand on hover */
+  cursor: pointer;
 }
 
 button.mat-button {
-  font-family: "Poppins", sans-serif; /* Font family for buttons */
+  font-family: "Poppins", sans-serif;
 }
 
 .spacer {
   flex: 1 1 auto;
 }
 
-/* Add margin-top to body content to ensure it's not hidden behind the fixed toolbar */
 body {
-  margin-top: 64px; /* Adjust this value based on the height of your toolbar */
+  margin-top: 64px;
 }
 
-/* Hide the navbar in responsive view */
 @media (max-width: 768px) {
   mat-toolbar {
     display: none;
