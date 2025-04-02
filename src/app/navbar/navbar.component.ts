@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
   }
 
   private onScroll() {
-    const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+    const sections = ['home', 'about', 'experience', 'skills', 'projects', 'contact'];
     const viewportHeight = window.innerHeight;
     const scrollPosition = window.scrollY;
     let currentSection = '';
